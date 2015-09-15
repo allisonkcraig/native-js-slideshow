@@ -23,9 +23,16 @@ body {
 .display-box {
 	float: left;
 	width: 60%;
-	margin: 5% auto;
+	margin: 8% 0;
 }
 
+/****** Div for Caption *********/
+.caption-box {
+	height: 10em;
+	width: 25%;
+	float: left;
+	margin: 2em 1em
+}
 
 .title {
 	color:white;
@@ -38,8 +45,8 @@ body {
 
 /****** P for Caption *********/
 .caption {
-	width: 25%;
 	float: right;
+	word-wrap: break-word;
 }
 
 /******Prev and Next arrows *********/
