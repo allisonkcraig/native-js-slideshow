@@ -7,8 +7,8 @@ body {
 
 
 
-
-.box {
+/****** Lightbox for Image and Caption *********/
+.lightbox {
 	background-color: white;
 	display: inline-block;
 	width: 50%;
@@ -19,6 +19,7 @@ body {
 
 }
 
+/****** Div for Image *********/
 .display-box {
 	float: left;
 	width: 60%;
@@ -35,21 +36,23 @@ body {
 	text-shadow: 2px 2px pink;
 }
 
+/****** P for Caption *********/
 .caption {
 	width: 25%;
 	float: right;
 }
 
+/******Prev and Next arrows *********/
 .arrow {
 	display: inline;
 }
 
-.left-arrow {
+.prev-arrow {
 	float: left;
 	margin: 20% 0 0 15%;
 }
 
-.right-arrow {
+.next-arrow {
 	float: right;
 	margin: 20% 15% 0 0;
 }

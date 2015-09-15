@@ -6,22 +6,25 @@
 	<link type="text/css" rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-{% for felinePhoto in tagged %}
+
+	{% for felinePhoto in tagged %}
 	<input type="hidden" name="{{felinePhoto.images['low_resolution'].url}}" class="image-data" value="{{felinePhoto.caption.text}}">
-{% endfor %}
+	{% endfor %}
 
 	<h1 class="title">Crazy Cat Lady</h1>
+
 	<div class="window">
-		<img class="arrow left-arrow" height='50em' src="/static/left-arrow.png">
+		<img class="arrow prev-arrow" height='50em' src="/static/left-arrow.png">
 
-			<div class="box slideshow" style="z-index: 3;">
-				<img class="display-box">
-				<p class="caption-box"></p>
-			</div>
+		<div class="lightbox" style="z-index: 3;">
+			<img class="display-box">
+			<p class="caption-box"></p>
+		</div>
 
-		<img class="arrow right-arrow" height='50em' src="/static/right-arrow.png">
+		<img class="arrow next-arrow" height='50em' src="/static/right-arrow.png">
 	</div>
 
 	<script type="text/javascript" src="/static/script.js"></script>
+	
 </body>
 </html>
