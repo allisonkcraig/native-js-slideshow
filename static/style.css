@@ -48,6 +48,10 @@ body {
 	float: right
 }
 
+p.caption {
+	word-wrap: break-word
+}
+
 /******Prev and Next arrows *********/
 .arrow {
 	display: inline
