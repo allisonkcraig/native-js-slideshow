@@ -14,37 +14,36 @@ import jinja2
 
 
 
-#configure the Instagram API
+#configure the Instagram API using environmental variables
 instaConfig = {
 	'client_id':os.environ.get('INSTA_CLIENT_ID'),
 	'client_secret':os.environ.get('INSTA_CLIENT_SECRET'),
 	'redirect_uri':os.environ.get('REDIRECT_URI')	
 }
 
-
+# Instantiate instagram
 igapi = client.InstagramAPI(**instaConfig)
-
-#I get by with little help from my friend, Georgia:
-# https://github.com/GstarGface/hide-and-cheek-design-lab/blob/master/design_lab.py
-
 
 
 
 @app.route('/')
 def index():
 	"""Returns the index page with the cat slideshow"""
+
+	# I get by with little help from my friend, Georgia:
+	# https://github.com/GstarGface/hide-and-cheek-design-lab/blob/master/design_lab.py
+
 	tagged_media, next = igapi.tag_recent_media(count=20, tag_name='catsofinstagram')
 
-
+	# Store image in a dictionary to pass through Jinja
 	imageData = {
 			'tagged' : tagged_media,
 	}
 
-	print imageData['tagged']
 	return render_template("index.html", **imageData)
 
 
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
