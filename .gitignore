@@ -1,0 +1,10 @@
+.DS_Store
+canvasenv
+secrets.sh
+*secrets.*
+*.pyc
+*beta-keys*
+beta-keys.py
+*.db
+drafter.db
+*env*

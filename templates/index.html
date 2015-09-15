@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+	
+
+	<h1 class="title">Crazy Cat Lady</h1>
+	<div class="window">
+		<img class="arrow" height='50em' src="http://pngimg.com/upload/camomile_PNG666.png">
+		<center>
+			<div class="box slideshow" style="z-index: 3;">
+				{% for o in tagged %}
+				<div class="thumbnail">
+					<a href="{{o.link}}">
+						<img class="image" src="{{o.images['thumbnail'].url}}" alt="{{o.caption.text}}">
+					</a>
+					<div class="caption"><p>{{o.caption.text}}</p></div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</center>
+		<img class="arrow" height='50em' src="http://pngimg.com/upload/camomile_PNG666.png">
+	</div>
+
+	<script type="text/javascript" src="/static/script.js"></script>
+</body>
+</html>
