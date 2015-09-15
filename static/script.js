@@ -30,18 +30,23 @@
 //     }
 // });
 var images = document.getElementsByClassName("image-data");
-console.log(images)
 
 var target = document.getElementsByClassName("arrow");
 
+var box = document.getElementsByClassName("box");
+console.log(box)
+
 target[0].addEventListener("click", function(e) {
   // console.log("you clicked " + e.target);
-  alert(this)
+  // var box = document.getElementsByClassName("box");
+  box[0].style.backgroundColor = "#D93600"
+  // alert(this)
   e.preventDefault();
 });
 
 target[1].addEventListener("click", function(e) {
   // console.log("you clicked " + e.target);
+  box[0].style.backgroundColor = "pink"
   console.log(this)
   e.preventDefault();
 });
@@ -65,8 +70,8 @@ target[1].addEventListener("click", function(e) {
 
 var current = 0;
 
-console.log(images[current]);
-console.log(this);
+// console.log(images[current]);
+// console.log(this);
 
 
 
@@ -74,10 +79,10 @@ window.setInterval(function(){
   images[current].style.display = 'block';
   var picId = images[current].id
 
-  this.css( 'display', 'none');
+  // this.css( 'display', 'none');
   current = current + 1;
-  console.log(current);
-  console.log(images[current]);
+  // console.log(current);
+  // console.log(images[current]);
 
   if (current > 5){
     current = 0
