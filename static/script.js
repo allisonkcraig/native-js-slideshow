@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 target[0].addEventListener("click", function(e) {
     current -= 1
-    console.log("SUBBED CURRENT", current)
+    // console.log("SUBBED CURRENT", current)
     if (current === -1){
         current = (imageDeckLength) 
-        console.log("CHANGED CURRENT FOR -1", current)
+        // console.log("CHANGED CURRENT FOR -1", current)
     };
     // Change image src and caption text
     box[0].src=imagesDeck[current].name
@@ -37,10 +37,10 @@ target[0].addEventListener("click", function(e) {
 
 target[1].addEventListener("click", function(e) {
     current += 1
-    console.log("ADDED CURRENT", current)
+    // console.log("ADDED CURRENT", current)
     if (current > imageDeckLength){
         current = 0 //If i've gone through entire deck, start at begining
-        console.log("CHANGED CURRENT FOR len", current)
+        // console.log("CHANGED CURRENT FOR len", current)
     }
     // Change image src and caption text
     box[0].src=imagesDeck[current].name
