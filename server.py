@@ -33,7 +33,7 @@ igapi = client.InstagramAPI(**instaConfig)
 @app.route('/')
 def index():
 	"""Returns the index page with the cat slideshow"""
-	tagged_media, next = igapi.tag_recent_media(count=60, tag_name='catsofinstagram')
+	tagged_media, next = igapi.tag_recent_media(count=20, tag_name='catsofinstagram')
 
 
 	imageData = {

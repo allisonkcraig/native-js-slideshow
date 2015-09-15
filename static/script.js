@@ -5,7 +5,7 @@ var current = 0;
 var imagesDeck = document.getElementsByClassName("image-data");
 
 //Count deck of images so I can use this to make rotation seamless
-var imageDeckLength = imagesDeck.length;
+var imageDeckLength = imagesDeck.length -1;
 
 //Select Arrows for event handlers
 var target = document.getElementsByClassName("arrow");
@@ -27,7 +27,7 @@ target[0].addEventListener("click", function(e) {
     current -= 1
     console.log("SUBBED CURRENT", current)
     if (current === -1){
-        current = (imageDeckLength -1) //because arrays are cardinal, I take the last number off the count to account for index 0
+        current = (imageDeckLength) //because arrays are cardinal, I take the last number off the count to account for index 0
         console.log("CHANGED CURRENT FOR -1", current)
     };
 
@@ -38,7 +38,7 @@ target[0].addEventListener("click", function(e) {
 target[1].addEventListener("click", function(e) {
     current += 1
     console.log("ADDED CURRENT", current)
-    if (current >= imageDeckLength){
+    if (current > imageDeckLength){
         current = 0 //If i've gone through entire deck, start at begining
         console.log("CHANGED CURRENT FOR len", current)
     }
