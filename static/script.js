@@ -1,3 +1,11 @@
+// step 1 hide all the generated images
+// step 2 parse the hidden data into variables & store them into an array
+// step 3 take that array, and generate new elements that will display
+
+
+
+
+
 // Credit where credit is due, found code to manipulate from this reference:
 // http://blog.garstasio.com/you-dont-need-jquery/ajax/#getting
 
@@ -21,18 +29,20 @@
 //       $(this).addClass("done");
 //     }
 // });
-
+var images = document.getElementsByClassName("image-data");
+console.log(images)
 
 var target = document.getElementsByClassName("arrow");
 
 target[0].addEventListener("click", function(e) {
-  console.log("you clicked " + e.target);
+  // console.log("you clicked " + e.target);
   alert(this)
   e.preventDefault();
 });
 
 target[1].addEventListener("click", function(e) {
-  console.log("you clicked " + e.target);
+  // console.log("you clicked " + e.target);
+  console.log(this)
   e.preventDefault();
 });
 
@@ -48,28 +58,33 @@ target[1].addEventListener("click", function(e) {
 //slideshow
 
 
-var images = document.getElementsByClassName("image");
-console.log(images)
+// var images = document.getElementsByClassName("image");
+// console.log(images)
 
 
 
 var current = 0;
 
 console.log(images[current]);
+console.log(this);
+
+
 
 window.setInterval(function(){
   images[current].style.display = 'block';
-  var picId = picArray[current].id
-  this.siblings().css( 'display', 'none');
+  var picId = images[current].id
+
+  this.css( 'display', 'none');
   current = current + 1;
   console.log(current);
-  console.log(picArray[current]);
+  console.log(images[current]);
 
   if (current > 5){
     current = 0
   }
 
 }, 5000);
+
 
 
 

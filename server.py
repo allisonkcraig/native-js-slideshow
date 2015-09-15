@@ -33,10 +33,10 @@ igapi = client.InstagramAPI(**instaConfig)
 @app.route('/')
 def index():
 	"""Returns the index page with the cat slideshow"""
-	tagged_media, next = igapi.tag_recent_media(count=60, tag_name='catsofinstagram')
+	tagged_media, next = igapi.tag_recent_media(count=10, tag_name='catsofinstagram')
 	# print tagged_media
-	for n in tagged_media:
-		print n
+	# for n in tagged_media:
+	# 	print n
 
 
 	imageData = {
@@ -49,7 +49,7 @@ def index():
 @app.route("/return-insta", methods=["POST"])
 def delete_block_skirt():
     """Returns image from Instagram API call"""
-    tagged_media, next = igapi.tag_recent_media(count=60, tag_name='catsofinstagram')
+    tagged_media, next = igapi.tag_recent_media(count=10, tag_name='catsofinstagram')
 	# print tagged_media
     for n in tagged_media:
 		print n

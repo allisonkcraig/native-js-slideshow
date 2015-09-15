@@ -5,25 +5,28 @@
 	<link type="text/css" rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-	
+{% for imgData in tagged %}
+	<input type="hidden" name="{{imgData.images['low_resolution'].url}}" class="image-data" value="{{imgData.caption.text}}">
+{% endfor %}
 
 	<h1 class="title">Crazy Cat Lady</h1>
 	<div class="window">
-		<img class="arrow" height='50em' src="http://pngimg.com/upload/camomile_PNG666.png">
-		<center>
+		<img class="arrow left-arrow" height='50em' src="/static/left-arrow.png">
+
 			<div class="box slideshow" style="z-index: 3;">
-				{% for o in tagged %}
-				<div class="thumbnail">
-					<a href="{{o.link}}">
-						<img class="image" src="{{o.images['thumbnail'].url}}" alt="{{o.caption.text}}">
+		<!-- 		{% for imgData in tagged %}
+				<div class="image">
+					<a href="{{imgData.link}}">
+						<img class="image" src="{{imgData.images['low_resolution'].url}}" alt="{{imgData.caption.text}}">
 					</a>
-					<div class="caption"><p>{{o.caption.text}}</p></div>
+		
 				</div>
-				{% endfor %}
+				<div class="caption"><p>{{imgData.caption.text}}</p></div>
+				{% endfor %} -->
 
 			</div>
-		</center>
-		<img class="arrow" height='50em' src="http://pngimg.com/upload/camomile_PNG666.png">
+
+		<img class="arrow right-arrow" height='50em' src="/static/right-arrow.png">
 	</div>
 
 	<script type="text/javascript" src="/static/script.js"></script>
