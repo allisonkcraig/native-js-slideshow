@@ -14,8 +14,8 @@ Crazy Cat Lady is an exploration of using native Javascript to create a slidesho
 * [Python](https://www.python.org/)
 * [Flask](http://flask.pocoo.org/)
 * [Jinja2](http://jinja.pocoo.org/docs/dev/)
-* [Instagram API](http://jinja.pocoo.org/docs/dev/)
-* [python-instagram](http://jinja.pocoo.org/docs/dev/)
+* [Instagram API](https://instagram.com/developer/)
+* [python-instagram](https://github.com/Instagram/python-instagram/)
 
 ## <a name="objectives"></a>Objectives
 The objectives of this exercise is the following:
