@@ -34,7 +34,7 @@ target[0].addEventListener("click", function(e) {
 });
 
 target[1].addEventListener("click", function(e) {
-    if (current > imageDeckLength -1){
+    if (current > imageDeckLength){
         current = 0 //If i've gone through entire deck, start at begining
     }
     box[0].src=imagesDeck[current].name
