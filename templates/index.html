@@ -5,7 +5,7 @@
 	<link type="text/css" rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-{% for felinePhoto in felinePhotos %}
+{% for felinePhoto in tagged %}
 	<input type="hidden" name="{{felinePhoto.images['low_resolution'].url}}" class="image-data" value="{{felinePhoto.caption.text}}">
 {% endfor %}
 

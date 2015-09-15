@@ -37,10 +37,10 @@ def index():
 
 
 	imageData = {
-			'felinePhotos' : tagged_media,
+			'tagged' : tagged_media,
 	}
 
-	print imageData['felinePhotos']
+	print imageData['tagged']
 	return render_template("index.html", **imageData)
 
 
