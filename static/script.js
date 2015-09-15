@@ -18,13 +18,12 @@ var caption = document.getElementsByClassName("caption-box");
 
 //Document events listener for DOM loaded for starting image
 document.addEventListener("DOMContentLoaded", function() { 
-   box[0].src=imagesDeck[current].name
-   caption[0].innerHTML=imagesDeck[current].value
+    box[0].src=imagesDeck[current].name
+    caption[0].innerHTML=imagesDeck[current].value
 });
 
 
 target[0].addEventListener("click", function(e) {
-
     if (current === -1){
         current = imageDeckLength -1 //because arrays are cardinal, I take the last number off the count to account for index 0
     };

@@ -5,8 +5,8 @@
 	<link type="text/css" rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-{% for imgData in tagged %}
-	<input type="hidden" name="{{imgData.images['low_resolution'].url}}" class="image-data" value="{{imgData.caption.text}}">
+{% for felinePhoto in felinePhotos %}
+	<input type="hidden" name="{{felinePhoto.images['low_resolution'].url}}" class="image-data" value="{{felinePhoto.caption.text}}">
 {% endfor %}
 
 	<h1 class="title">Crazy Cat Lady</h1>
