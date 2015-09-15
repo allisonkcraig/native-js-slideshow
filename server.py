@@ -34,16 +34,13 @@ igapi = client.InstagramAPI(**instaConfig)
 def index():
 	"""Returns the index page with the cat slideshow"""
 	tagged_media, next = igapi.tag_recent_media(count=60, tag_name='catsofinstagram')
-	# print tagged_media
-	# for n in tagged_media:
-	# 	print n
 
 
 	imageData = {
-			'tagged' : tagged_media,
+			'felinePhotos' : tagged_media,
 	}
 
-	print imageData['tagged']
+	print imageData['felinePhotos']
 	return render_template("index.html", **imageData)
 
 
