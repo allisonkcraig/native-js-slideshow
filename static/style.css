@@ -14,14 +14,15 @@ body {
 	width: 50%;
     margin: 1em 5%;
 	height: 30em;
-	box-shadow: 0px 0px 50px black;
+	box-shadow: 0px 0px 60px black;
 	overflow: hidden
 
 }
 
-.image {
+.display-box {
 	float: left;
-	width: 75%;
+	width: 60%;
+	margin: auto auto;
 }
 
 .title {
@@ -35,6 +36,7 @@ body {
 .caption {
 	width: 25%;
 	float: right;
+	color: grey;
 }
 
 .arrow {
