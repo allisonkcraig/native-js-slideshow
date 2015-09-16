@@ -19,8 +19,8 @@ var caption = document.getElementsByClassName("caption-box");
 
 //Document event listener for DOM loaded for starting image
 document.addEventListener("DOMContentLoaded", function() { 
-    imgDisplay[0].src=imagesDeck[currentIndex].name
-    caption[0].innerHTML=imagesDeck[currentIndex].value
+    imgDisplay[0].src=imagesDeck[currentIndex].name;
+    caption[0].innerHTML=imagesDeck[currentIndex].value;
 });
 
 
@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // PREV ARROW
 arrowImgs[0].addEventListener("click", function() {
-    currentIndex -= 1
+    currentIndex -= 1;
     if (currentIndex === -1){
         currentIndex = (imageDeckLength) //If i've gone through entire deck with PREV arrow, start at end
     };
     // Change image src and caption text
-    imgDisplay[0].src=imagesDeck[currentIndex].name
-    caption[0].innerHTML=imagesDeck[currentIndex].value
+    imgDisplay[0].src=imagesDeck[currentIndex].name;
+    caption[0].innerHTML=imagesDeck[currentIndex].value;
 });
 
 // NEXT ARROW
@@ -43,10 +43,10 @@ arrowImgs[1].addEventListener("click", function() {
     currentIndex += 1
     if (currentIndex > imageDeckLength){
         currentIndex = 0 //If i've gone through entire deck with NEXT arrow, start at begining
-    }
+    };
     // Change image src and caption text
-    imgDisplay[0].src=imagesDeck[currentIndex].name
-    caption[0].innerHTML=imagesDeck[currentIndex].value
+    imgDisplay[0].src=imagesDeck[currentIndex].name;
+    caption[0].innerHTML=imagesDeck[currentIndex].value;
 });
 
 
