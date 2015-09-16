@@ -1,7 +1,7 @@
 //Instatiate counter for current image index
 var currentIndex = 0;
 
-//Get images passed through hidden inputs so control with JS
+//Get images passed through hidden inputs to control with JS
 var imagesDeck = document.getElementsByClassName("image-data");
 
 //Count deck of images so I can use this to make rotation seamless
