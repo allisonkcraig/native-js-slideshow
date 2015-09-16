@@ -59,7 +59,8 @@ body {
 
 /******Prev and Next arrows *********/
 .arrow {
-	display: inline
+	display: inline;
+	height: 3em
 }
 
 .prev-arrow {
