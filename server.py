@@ -21,6 +21,7 @@ def index():
 	"""Returns the index page with the cat slideshow"""
 
 	# Below is a repo from a fellow Hackbrighter that I used as an example of how to use the python-instagram module.
+	# This module allows me to make an API call wihtout needing a user to log in with OAuth
 	# https://github.com/GstarGface/hide-and-cheek-design-lab/blob/master/design_lab.py
 	tagged_media, next = igapi.tag_recent_media(count=30, tag_name='catsofinstagram')
 
