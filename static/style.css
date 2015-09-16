@@ -43,6 +43,15 @@ body {
 	text-shadow: 2px 2px pink
 }
 
+.sub-title {
+	color:white;
+	font-family: 'Lobster', sans-serif;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 2em;
+}
+
+
 /****** P for Caption *********/
 .caption {
 	float: right
