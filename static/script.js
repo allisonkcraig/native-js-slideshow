@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Click Event Handlers for 'Previous' and 'Next' arrows:
 
 // PREV ARROW
-arrowImgs[0].addEventListener("click", function(e) {
+arrowImgs[0].addEventListener("click", function() {
     currentIndex -= 1
     if (currentIndex === -1){
         currentIndex = (imageDeckLength) //If i've gone through entire deck with PREV arrow, start at end
@@ -39,7 +39,7 @@ arrowImgs[0].addEventListener("click", function(e) {
 });
 
 // NEXT ARROW
-arrowImgs[1].addEventListener("click", function(e) {
+arrowImgs[1].addEventListener("click", function() {
     currentIndex += 1
     if (currentIndex > imageDeckLength){
         currentIndex = 0 //If i've gone through entire deck with NEXT arrow, start at begining
