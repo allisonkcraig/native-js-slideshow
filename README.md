@@ -26,7 +26,7 @@ The objectives of this exercise are the following:
 
 ## <a name="v2"></a>Version 2.0
 
-The next step I would take to improve this slideshow would be to add a fading annimations as you index images to make the transition smoother. 
+The next step I would take to improve this slideshow would be to add a fading animation as you index images to make the transition smoother. 
 
 ## <a name="author"></a>Author
 Allison Craig is a software engineer from San Francisco, CA.
