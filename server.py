@@ -1,17 +1,10 @@
-import random
-
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# -*- coding: UTF-8 -*-
 import os
-import hmac
-from hashlib import sha256
 from instagram import client
 import jinja2
-# import flickr
-
 
 
 #configure the Instagram API using environmental variables
@@ -25,26 +18,22 @@ instaConfig = {
 igapi = client.InstagramAPI(**instaConfig)
 
 
-
 @app.route('/')
 def index():
 	"""Returns the index page with the cat slideshow"""
 
-	# I get by with little help from my friend, Georgia:
+	# Below is a repo from a fellow Hackbrighter that I used as an example of how to use the python-instagram module.
 	# https://github.com/GstarGface/hide-and-cheek-design-lab/blob/master/design_lab.py
-
 	tagged_media, next = igapi.tag_recent_media(count=30, tag_name='catsofinstagram')
 
 
-	# Store image in a dictionary to pass through Jinja
+	# Store images and data in a dictionary to pass through Jinja
 	imageData = {
 			'tagged' : tagged_media,
 	}
 
 
 	return render_template("index.html", **imageData)
-
-
 
 
 if __name__ == "__main__":
