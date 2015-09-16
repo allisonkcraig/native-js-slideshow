@@ -1,11 +1,9 @@
 from flask import Flask, render_template
-
-app = Flask(__name__)
-
 import os
 from instagram import client
 import jinja2
 
+app = Flask(__name__)
 
 #configure the Instagram API using environmental variables
 instaConfig = {
