@@ -33,12 +33,14 @@ def index():
 	# I get by with little help from my friend, Georgia:
 	# https://github.com/GstarGface/hide-and-cheek-design-lab/blob/master/design_lab.py
 
-	tagged_media, next = igapi.tag_recent_media(count=20, tag_name='catsofinstagram')
+	tagged_media, next = igapi.tag_recent_media(count=30, tag_name='catsofinstagram')
+
 
 	# Store image in a dictionary to pass through Jinja
 	imageData = {
 			'tagged' : tagged_media,
 	}
+
 
 	return render_template("index.html", **imageData)
 

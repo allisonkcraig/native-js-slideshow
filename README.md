@@ -18,7 +18,7 @@ Crazy Cat Lady is an exploration of using native Javascript to create a slidesho
 * [python-instagram](https://github.com/Instagram/python-instagram/)
 
 ## <a name="objectives"></a>Objectives
-The objectives of this exercise is the following:
+The objectives of this exercise are the following:
 * Use native Javascript to display images
 * Make a call to a public API to retreive images
 * Change slideshow image without refreshing the webpage
