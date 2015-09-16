@@ -6,7 +6,7 @@
 	<link type="text/css" rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-
+	<!-- Save photos in hidden inputs which can be selected my Javascript -->
 	{% for felinePhoto in tagged %}
 	<input type="hidden" name="{{felinePhoto.images['low_resolution'].url}}" class="image-data" value="{{felinePhoto.caption.text}}">
 	{% endfor %}
@@ -22,7 +22,7 @@
 			<p class="caption-box"></p>
 		</div>
 
-		<img class="arrow next-arrow" height='50em' src="/static/right-arrow.png">
+		<img class="arrow next-arrow" src="/static/right-arrow.png">
 	</div>
 
 	<script type="text/javascript" src="/static/script.js"></script>
