@@ -22,7 +22,7 @@ body {
 .display-box {
 	float: left;
 	width: 60%;
-	margin: 1% 1%
+	padding: 1% 1%
 }
 
 /****** Div for Caption *********/
@@ -65,10 +65,10 @@ body {
 
 .prev-arrow {
 	float: left;
-	margin: 20% 0 0 10%
+	margin: 20% 5% 0 10%
 }
 
 .next-arrow {
 	float: right;
-	margin: 20% 10% 0 0
+	margin: 20% 10% 0 5%
 }
